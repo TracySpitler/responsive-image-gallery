@@ -1,0 +1,27 @@
+{
+  "name": "responsive-image-gallery",
+  "version": "1.0.0",
+  "description": "A responsive image gallery",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TracySpitler/responsive-image-gallery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TracySpitler/responsive-image-gallery/issues"
+  },
+  "homepage": "https://github.com/TracySpitler/responsive-image-gallery#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0",
+    "unsplash-js": "^4.8.0"
+  }
+}
