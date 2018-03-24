@@ -16,7 +16,7 @@ fetch(randomPhoto)
       // Fill Gallery
       var post = '<ul id="img-gallery">';
 
-      for (var i = 0; i < 9; i++) {
+      for (i = 0; i < 9; i++) {
         post += '<li>';
         post += '<div class="container">';
         post += '<span><img src="' + data.results[i].urls.regular + ' srcset="https://placehold.it/300.jpg?text=300px 300w, https://placehold.it/600.jpg?text=600px 600w, https://placehold.it/800.jpg?text=800px 800w" sizes="(max-width:300px) 100vw, (max-width: 600px) 33vw, 300px" alt=""' + data.results[i].description + '" class="image">';
@@ -31,7 +31,7 @@ fetch(randomPhoto)
       }
 
       post += '</ul>';
-      gallery.querySelector('#img-gallery').innerHTML = post;
+      document.querySelector('#img-gallery').innerHTML = post;
     }
   });
 
