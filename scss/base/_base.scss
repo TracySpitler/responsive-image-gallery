@@ -29,7 +29,7 @@ header {
 
   & .i-globe:hover {
     filter: invert(30%) sepia(40%) saturate(9500%) hue-rotate(195deg); // $blue
-    //animation: spin 4s linear infinite;
+    //animation: colors 4s linear infinite;
     animation: spin 3s linear infinite;
     animation-direction: alternate;
   }
@@ -38,4 +38,12 @@ header {
 a:hover {
   color: $blue;
   opacity: 1;
+}
+
+#globe {
+  transition: all 2s ease;
+
+  & .i-globe-active {
+    filter: invert(30%) sepia(99%) saturate(1500%) hue-rotate(340deg);
+  }
 }
