@@ -1,0 +1,11 @@
+/* Keyframes
+================================================== */
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes colors {
+  from { filter: invert(30%) sepia(40%) saturate(9500%) hue-rotate(195deg);  }
+	to { filter: invert(30%) sepia(99%) saturate(1500%) hue-rotate(340deg); }
+}

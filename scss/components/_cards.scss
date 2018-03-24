@@ -1,0 +1,70 @@
+/* Cards
+================================================== */
+
+#gallery {
+
+  & #img-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  & .container {
+    width: 300px;
+    min-height: 226px;
+    background-color: white;
+    position: relative;
+    margin: 2rem;
+    box-shadow: 3px 3px 9px $dark-grey;
+
+    & .image {
+      width: 100%;
+      //display: block;
+      height: 226px;
+      //object-fit: contain;
+    }
+  }
+
+  & .overlay {
+    height: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    transition: .5s ease;
+    border-bottom: 4px solid white;
+    opacity: 1;
+
+  }
+
+  & .container:hover .overlay {
+    height: 30%;
+  }
+
+  & .text > p {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: .3rem .8rem;
+    opacity: 1;
+
+    & .svg {
+      filter: invert(40%) sepia(0%) saturate(500%) hue-rotate(0deg);
+      margin: 0 1rem;
+    }
+
+    & .i-user:hover {
+      filter: invert(30%) sepia(40%) saturate(9500%) hue-rotate(195deg); // $blue
+      animation: spin 3s linear infinite;
+    }
+
+    & .i-heart:hover {
+      filter: invert(30%) sepia(99%) saturate(1500%) hue-rotate(340deg); // $red
+      animation: spin 3s linear infinite;
+      animation-direction: reverse;
+    }
+  }
+}

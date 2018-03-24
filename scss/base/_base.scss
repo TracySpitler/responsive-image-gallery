@@ -1,0 +1,41 @@
+/* Base
+================================================== */
+
+html {
+  font-family: $font-stack-josefin;
+  font-size: $font-size;
+  max-width: 1450px;
+	overflow-x: hidden;
+  line-height: 1.6;
+}
+
+header, footer {
+  text-align: center;
+  color: $dark-grey;
+  margin: 3rem;
+
+  & a {
+    color: $dark-grey;
+    opacity: .5;
+  }
+}
+
+header {
+
+  & p {
+    font-family: $font-stack-georgia;
+    opacity: .8;
+  }
+
+  & .i-globe:hover {
+    filter: invert(30%) sepia(40%) saturate(9500%) hue-rotate(195deg); // $blue
+    //animation: spin 4s linear infinite;
+    animation: spin 3s linear infinite;
+    animation-direction: alternate;
+  }
+}
+
+a:hover {
+  color: $blue;
+  opacity: 1;
+}
