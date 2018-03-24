@@ -1,0 +1,209 @@
+/* Main
+================================================== */
+/* Variables
+================================================== */
+/* Keyframes
+================================================== */
+@import url("https://use.typekit.net/nnl2ldi.css");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-webkit-keyframes colors {
+  from {
+    -webkit-filter: invert(30%) sepia(40%) saturate(9500%) hue-rotate(195deg);
+            filter: invert(30%) sepia(40%) saturate(9500%) hue-rotate(195deg); }
+  to {
+    -webkit-filter: invert(30%) sepia(99%) saturate(1500%) hue-rotate(340deg);
+            filter: invert(30%) sepia(99%) saturate(1500%) hue-rotate(340deg); } }
+
+@keyframes colors {
+  from {
+    -webkit-filter: invert(30%) sepia(40%) saturate(9500%) hue-rotate(195deg);
+            filter: invert(30%) sepia(40%) saturate(9500%) hue-rotate(195deg); }
+  to {
+    -webkit-filter: invert(30%) sepia(99%) saturate(1500%) hue-rotate(340deg);
+            filter: invert(30%) sepia(99%) saturate(1500%) hue-rotate(340deg); } }
+
+/* Mixins
+================================================== */
+/* Placeholders
+================================================== */
+/* CSS RESET
+==================================================
+================================================== */
+html, body, div, main, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, button, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+::before, ::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/* HTML5 - Older browser support
+================================================== */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* BODY
+================================================== */
+body {
+  line-height: 1; }
+
+/* LISTS - Clear bullets
+================================================== */
+ol, ul {
+  list-style: none; }
+
+/* QUOTES
+================================================== */
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* TABLES
+================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Base
+================================================== */
+html {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 62.5%;
+  max-width: 1450px;
+  overflow-x: hidden;
+  line-height: 1.6; }
+
+header, footer {
+  text-align: center;
+  color: #515151;
+  margin: 3rem; }
+  header a, footer a {
+    color: #515151;
+    opacity: .5; }
+
+header p {
+  font-family: georgia, serif;
+  opacity: .8; }
+
+header .i-globe:hover {
+  -webkit-filter: invert(30%) sepia(40%) saturate(9500%) hue-rotate(195deg);
+          filter: invert(30%) sepia(40%) saturate(9500%) hue-rotate(195deg);
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; }
+
+a:hover {
+  color: #0074D9;
+  opacity: 1; }
+
+/* Typography
+================================================== */
+h1 {
+  font-size: 4rem;
+  color: #000;
+  margin: .5rem; }
+
+p, span {
+  font-size: 1.4rem; }
+
+/* Cards
+================================================== */
+#gallery #img-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+#gallery .container {
+  width: 300px;
+  min-height: 226px;
+  background-color: white;
+  position: relative;
+  margin: 2rem;
+  -webkit-box-shadow: 3px 3px 9px #515151;
+          box-shadow: 3px 3px 9px #515151; }
+  #gallery .container .image {
+    width: 100%;
+    height: 226px; }
+
+#gallery .overlay {
+  height: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  border-bottom: 4px solid white;
+  opacity: 1; }
+
+#gallery .container:hover .overlay {
+  height: 30%; }
+
+#gallery .text > p {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .3rem .8rem;
+  opacity: 1; }
+  #gallery .text > p .svg {
+    -webkit-filter: invert(40%) sepia(0%) saturate(500%) hue-rotate(0deg);
+            filter: invert(40%) sepia(0%) saturate(500%) hue-rotate(0deg);
+    margin: 0 1rem; }
+  #gallery .text > p .i-user:hover {
+    -webkit-filter: invert(30%) sepia(40%) saturate(9500%) hue-rotate(195deg);
+            filter: invert(30%) sepia(40%) saturate(9500%) hue-rotate(195deg);
+    -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite; }
+  #gallery .text > p .i-heart:hover {
+    -webkit-filter: invert(30%) sepia(99%) saturate(1500%) hue-rotate(340deg);
+            filter: invert(30%) sepia(99%) saturate(1500%) hue-rotate(340deg);
+    -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
+    animation-direction: reverse; }
